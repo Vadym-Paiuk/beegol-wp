@@ -1,0 +1,50 @@
+.more {
+    padding: 170px 0;
+    background-color: var(--blue-2);
+
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../images/dist/more-bg.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 830px;
+        z-index: -1;
+        opacity: 0.4;
+    }
+    &__title {
+        margin-bottom: 2rem;
+    }
+    &__subtitle {
+        margin-bottom: 0;
+        color: rgba($color: #fff, $alpha: 0.75);
+    }
+    &__row {
+        justify-content: space-between;
+        align-items: center;
+    }
+    @media screen and (max-width: 767px) {
+        padding: 100px 0;
+        &__subtitle {
+            margin-bottom: 25px;
+        }
+        &:before {
+            background-size: auto;
+        }
+        &__row {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        padding: 60px 0;
+    }
+}

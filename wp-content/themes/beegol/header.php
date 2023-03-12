@@ -3,9 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <!-- <base href="/"> -->
-    <title>Home</title>
-    <meta name="description" content="Startup HTML template OptimizedHTML 5">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png">
     <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/dist/preview.jpg">
@@ -22,7 +19,7 @@
 
 <?php $settings = get_field( 'settings', 'options' ); ?>
 
-<header class="header">
+<header class="header <?php if( is_page( 5 ) ) echo 'header--solutions'; ?>">
     <div class="container">
         <div class="header__inner">
             <div class="logo header__logo">

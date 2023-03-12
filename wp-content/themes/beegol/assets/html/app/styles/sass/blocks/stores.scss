@@ -1,0 +1,69 @@
+.stores {
+    color: #000;
+    background-color: #F1F5F9;
+    @media screen and (min-width: 1200px) {
+        padding: 100px 0;
+    }
+    &__subtitle {
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+    &__title {
+        color: #000;
+        margin-bottom: 20px;
+    }
+    &__description {
+        font-weight: 500;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        max-width: 260px;
+        width: 50%;
+        &:nth-child(2n) {
+            margin-bottom: 2rem;
+        }
+        &:nth-child(odd) {
+            padding-right: 25px;
+        }
+        &-name {
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        &-adress {
+            color: rgba($color: #000000, $alpha: 0.6);
+            margin-bottom: 0;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &__description {
+            margin-bottom: 25px;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &__subtitle {
+            margin-bottom: 10px;
+        }
+        &__title {
+            margin-bottom: 10px;
+        }
+    }
+    @media screen and (max-width: 375px) {
+        &__item {
+            max-width: 100%;
+            width: 100%;
+            &:nth-child(2n) {
+                margin-bottom: 0;
+            }
+            &:nth-child(odd) {
+                padding-right: 0;
+            }
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

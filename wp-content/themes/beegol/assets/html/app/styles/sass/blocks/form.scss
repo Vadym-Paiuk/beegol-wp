@@ -1,0 +1,37 @@
+.form {
+    &__input, &__textarea {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    &__textarea {
+        height: 150px;
+        resize: none;
+    }
+    &__label {
+        color: #5E6987;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        font-size: 14px;
+    }
+    &__btn {
+        width: 100%;
+        text-align: center;
+    }
+    @media screen and (max-width: 375px) {
+        &__input, &__textarea {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.input {
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    color: #000;
+    &:focus {
+        border: 1px solid #162E49;
+    }
+}

@@ -1,0 +1,144 @@
+.advantages {
+    background-color: var(--blue-2);
+    color: #fff;
+    counter-reset: feature;  
+    overflow: hidden;
+    @media screen and (min-width: 1200px) {
+        padding: 120px 0;
+    }
+    &__title {
+        max-width: 530px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+    &__row {
+        justify-content: center;
+        margin-left: -4px;
+        margin-right: -4px;
+    }
+    &__col {
+        margin-top: 30px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 1;
+        &:after, &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            background-size: contain;
+            background-position: center;
+            z-index: -1;
+        }
+        &--home {
+            &:after, &:before {
+                width: 768px;
+                height: 768px;
+                background-image: url(../images/dist/circle.svg);
+                opacity: 0.6;
+            }
+            &:after {
+                top: -240px;
+                left: calc(100% - 140px);
+            }
+            &:before {
+                top: 200px;
+                right: calc(100% - 260px);
+            }
+        }
+        &--solutions {
+            &:after, &:before {
+                width: 785px;
+                height: 575px;
+                background-image: url(../images/dist/advantages-bg.svg);
+                opacity: 0.6;
+                background-size: contain;
+                background-position: center;
+            }
+            &:after {
+                bottom: -300px;
+                right: -215px;
+            }
+            &:before {
+                top: -200px;
+                left: -350px;
+                transform: rotate(-190deg);
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &__title {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.advantage {
+    background-color: var(--blue-3);
+    padding: 2rem;
+    height: 100%;
+    border-radius: 12px;
+    transition: all 400ms;
+    &:hover {
+        background-color: var(--blue-light);
+        transform: translateY(-10px);
+    }
+    &.active {
+        background-color: #376392;
+        transform: translateY(-10px);
+    }
+
+    &:hover &__number, &.active &__number {
+        background-color: #fff;
+        &:after {
+            color: var(--blue-light);
+        }
+    }
+    &__number {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        margin-bottom:  3.5rem;
+        margin-top: 2.5rem;
+        background-color: var(--blue-3-lighten);
+        position: relative;
+        .advantages__col &:after {
+            counter-increment: feature;
+            content: counter(feature) ".";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 1;
+        }
+    }
+    &__title {
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba($color: #fff, $alpha: 0.24);
+    }
+    &__text {
+        color: rgba($color: #fff, $alpha: 0.8);
+        margin-bottom: 0;
+    }
+    @media screen and (max-width: 1199px) {
+        &__number {
+            margin-bottom: 2rem;
+            margin-top: 0;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        padding: 1rem;
+        &__number {
+            margin-bottom: 1rem;
+        }
+    }
+}

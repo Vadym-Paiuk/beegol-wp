@@ -1,0 +1,94 @@
+.team {
+    background: #F4F4F4;
+    @media screen and (min-width: 1200px) {
+        padding: 120px 0;
+    }
+    &__title {
+        max-width: 400px;
+        margin-bottom: 2rem;
+        @media screen and (min-width: 1200px) {
+            font-size: 54px;
+        }
+    }
+    &__row {
+        &:last-child {
+            margin-top: 160px;
+            padding-top: 12px;
+            border-top: 1px solid rgba($color: #2C3C64, $alpha: 0.4);
+        }
+    }
+    &__col {
+        margin-top: 3rem;
+    }
+    &__text {
+        font-size: 20px;
+        color: #000;
+        opacity: 0.8;
+        margin-bottom: 0;
+    }
+    &-item {
+        color: #000;
+        &__img {
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            width: 100%;
+        }
+        &__name {
+            margin-bottom: 4px;
+        }
+        &__post {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+    }
+    @media screen and (max-width: 1199px) {
+
+        &__row {
+
+            &:last-child {
+                margin-top: 60px;
+                padding-top: 20px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        &__text {
+            font-size: 18px;
+        }
+        &__row {
+
+            &:last-child {
+                margin-top: 40px;
+                padding-top: 0;
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 575px) {
+        &__title {
+            margin-bottom: 0;
+            max-width: 100%;
+            text-align: center;
+        }
+        &__row {
+
+            &--team {
+                max-width: 260px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            &:last-child {
+                margin-top: 30px;
+            }
+        }
+        &__col {
+            margin-top: 30px;
+        }
+        &__text {
+            font-size: 16px;
+        }
+    }
+}
