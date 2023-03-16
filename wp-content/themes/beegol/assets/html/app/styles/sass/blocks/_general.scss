@@ -1,0 +1,132 @@
+// GENERAL PROJECT STYLES
+:root {
+    --blue: #2C3C64;
+    --blue-2: #0B1A29;
+    --blue-3: #162E49;
+    --blue-3-lighten: #223A54;
+    --blue-light: #4673A3;
+    --primary: #012343;
+}
+html {
+    font-size: 16px;
+}
+img {
+    max-width: 100%;
+}
+h1, h2, h3, h4, h5, h5 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+h1 {
+    font-size: 3.5rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2.5rem;
+}
+
+.btn {
+    background: var(--blue);
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border: 1px solid var(--blue);
+    transition: all 400ms;
+    &:hover {
+        color: var(--blue);
+        background: #fff;
+    }
+    &:active {
+        background: #1E2D54 !important;
+        color: #fff !important;
+        border: 1px solid #1E2D54 !important;
+    }
+    &--white {
+        border: 1px solid #fff;
+        color: #000;
+        background: #fff;
+        svg {
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        &:hover {
+            border: 1px solid var(--blue);
+        }
+    }
+    &:disabled {
+        background: #DBDBDB !important;
+        color: #fff !important;
+    }
+}
+.block {
+
+    @media screen and (max-width: 1199px) {
+        padding: 80px 0;
+        &:first-of-type {
+            padding-top: 120px;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        padding: 60px 0;
+    }
+    @media screen and (max-width: 767px) {
+        padding: 40px 0;
+        &:first-of-type {
+            padding-top: 100px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1399px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.25rem;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.page {
+    padding-top: 100px;
+}

@@ -1,12 +1,5 @@
 <?php
-register_nav_menus( array(
-	'top' => 'Верхнее меню',
-	'left' => 'Нижнее'
-) );
-add_theme_support('post-thumbnails');
-set_post_thumbnail_size(254, 190);
-
-if ( function_exists('register_sidebar') )
-register_sidebar();
-
-?>
+include_once 'includes/assets.php';
+include_once 'includes/settings.php';
+include_once 'includes/cpt.php';
+include_once 'includes/blocks-registration.php';
