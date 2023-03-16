@@ -1,6 +1,6 @@
 <?php extract( $args ); ?>
 
-<div class="history__item">
+<div class="history__item" data-aos="fade-up" data-aos-offset="500">
     <?php if( !empty( $title ) ): ?>
         <div class="history__item-info">
             <p class="history__item-text">
@@ -17,7 +17,7 @@
     <?php endif; ?>
     <?php if( !empty( $image ) ): ?>
         <div class="history__item-media">
-            <?php echo wp_get_attachment_image( $image, 'full', false, [ 'class' => 'history__item-img' ] ); ?>
+            <?php echo wp_get_attachment_image_custom( $image, 'full', false, [ 'class' => 'history__item-img' ] ); ?>
         </div>
     <?php endif; ?>
 </div>

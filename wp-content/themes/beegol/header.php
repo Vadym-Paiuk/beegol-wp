@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
+<?php $settings = get_field( 'settings', 'options' ); ?>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png">
-    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/dist/preview.jpg">
+    <link rel="icon" href="<?php echo $settings['favicon']; ?>">
 
     <link rel="alternate" type="application/rdf+xml" title="RDF mapping" href="<?php bloginfo('rdf_url'); ?>" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="<?php bloginfo('rss_url'); ?>" />
@@ -17,15 +18,13 @@
 
 <body>
 
-<?php $settings = get_field( 'settings', 'options' ); ?>
-
 <header class="header <?php if( is_page( 5 ) ) echo 'header--solutions'; ?>">
     <div class="container">
         <div class="header__inner">
             <div class="logo header__logo">
                 <a href="/">
                     <?php
-                        echo wp_get_attachment_image( $settings['logo_image'], 'full' );
+                        echo wp_get_attachment_image_custom( $settings['logo_image'], 'full' );
                         echo $settings['logo_title'];
                     ?>
                 </a>

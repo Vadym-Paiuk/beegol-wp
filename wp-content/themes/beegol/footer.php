@@ -6,7 +6,7 @@
             <div class="footer__logo logo">
                 <a href="/">
                     <?php
-                        echo wp_get_attachment_image( $settings['logo_image'], 'full' );
+                        echo wp_get_attachment_image_custom( $settings['logo_image'], 'full' );
                         echo $settings['logo_title'];
                     ?>
                 </a>
@@ -65,7 +65,7 @@
         <div class="footer__bottom">
             <?php if( !empty( $settings['copyright'] ) ): ?>
                 <div class="footer__copyright">
-                    <?php echo $settings['copyright']; ?>
+                    <?php echo preg_replace( '/{YEAR}/', date( 'Y' ), $settings['copyright'] ); ?>
                 </div>
             <?php endif; ?>
     

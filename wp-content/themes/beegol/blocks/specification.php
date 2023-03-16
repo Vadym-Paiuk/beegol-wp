@@ -31,7 +31,7 @@
                 </div>
                 <?php if( !empty( $block_fields['image'] ) ): ?>
                     <div class="col-lg-6 specification__col">
-                        <?php echo wp_get_attachment_image( $block_fields['image'], 'full', false, [ 'class' => 'specification__img' ] ); ?>
+                        <?php echo wp_get_attachment_image_custom( $block_fields['image'], 'full', false, [ 'class' => 'specification__img' ] ); ?>
                     </div>
                 <?php endif; ?>
                 

@@ -8,7 +8,7 @@
             </h4>
         <?php endif; ?>
         <?php if( !empty( $image ) ): ?>
-            <?php echo wp_get_attachment_image( $image, 'full', false, [ 'class' => 'experience-item__img' ] ); ?>
+            <?php echo wp_get_attachment_image_custom( $image, 'full', false, [ 'class' => 'experience-item__img' ] ); ?>
         <?php endif; ?>
         <?php if( !empty( $description ) ): ?>
             <p class="experience-item__text">

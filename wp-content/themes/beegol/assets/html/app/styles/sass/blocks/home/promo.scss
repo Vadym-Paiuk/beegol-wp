@@ -13,9 +13,9 @@
         text-transform: uppercase;
     }
     &__img {
-        border: 6px solid #101E42;
+        border: 12px solid #101E42;
         border-radius: 15px;
-        max-width: 730px;
+        max-width: 733px;
     }
     &__row {
         align-items: center;
@@ -84,6 +84,12 @@
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
+        &-marquee-line {
+            display: none;
+        }
+        &-marquee-line:first-child {
+            display: flex;
+        }
     }
     &__item {
         &:not(:last-child) {
@@ -106,14 +112,68 @@
         }
     }
     @media screen and (max-width: 575px) {
-        &__list {
-            flex-direction: column;
-            width: 100%;
-        }
-        &__item {
-            &:not(:last-child) {
-                margin-right: 0px;
+
+        @-webkit-keyframes marquee {
+            0% {
+                -webkit-transform: translate(0,0);
+                transform: translate(0,0);
             }
+            100% {
+                -webkit-transform: translate(-100%,0);
+                transform: translate(-100%,0);
+            }
+        }
+
+        @keyframes marquee {
+            0% {
+                -webkit-transform: translate(0,0);
+                transform: translate(0,0);
+            }
+            100% {
+                -webkit-transform: translate(-100%,0);
+                transform: translate(-100%,0);
+            }
+        }
+
+        &__list {
+            position: relative;
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            overflow: hidden;
+            max-width: 1920px;
+            margin: 20px auto 0 auto;
+            &-marquee-line{
+                -webkit-animation: marquee 20s 0s infinite linear;
+                animation: marquee 20s 0s infinite linear;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                overflow: hidden;
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                margin-right: 0;
+                padding: 0;
+            }
+        }
+
+        &__item {
+            margin: 20px 10px;
+        }
+        &__item:last-child {
+            margin: 20px 30px 20px 10px;
         }
     }
 

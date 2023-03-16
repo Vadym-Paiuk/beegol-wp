@@ -27,7 +27,7 @@
     
             <?php if( !empty( $block_fields['image'] ) ): ?>
                 <div class="col-lg-5 col-sm-10 promo__col">
-                    <?php echo wp_get_attachment_image( $block_fields['image'], 'full', false, [ 'class' => 'promo__img' ] ); ?>
+                    <?php echo wp_get_attachment_image_custom( $block_fields['image'], 'full', false, [ 'class' => 'promo__img' ] ); ?>
                 </div>
             <?php endif; ?>
         </div>
@@ -39,11 +39,27 @@
                 </p>
                 <?php if( !empty( $block_fields['customers']['list'] ) ): ?>
                     <div class="customers__list">
-                        <?php
-                            foreach ( $block_fields['customers']['list'] as $customer ) {
-                                echo wp_get_attachment_image( $customer['image'], 'full', false, [ 'class' => 'customers__item' ] );
-                            }
-                        ?>
+                        <span class="customers__list-marquee-line">
+                            <?php
+                                foreach ( $block_fields['customers']['list'] as $customer ) {
+                                    echo wp_get_attachment_image_custom( $customer['image'], 'full', false, [ 'class' => 'customers__item' ] );
+                                }
+                            ?>
+                        </span>
+                        <span class="customers__list-marquee-line">
+                            <?php
+                                foreach ( $block_fields['customers']['list'] as $customer ) {
+                                    echo wp_get_attachment_image_custom( $customer['image'], 'full', false, [ 'class' => 'customers__item' ] );
+                                }
+                            ?>
+                        </span>
+                        <span class="customers__list-marquee-line">
+                            <?php
+                                foreach ( $block_fields['customers']['list'] as $customer ) {
+                                    echo wp_get_attachment_image_custom( $customer['image'], 'full', false, [ 'class' => 'customers__item' ] );
+                                }
+                            ?>
+                        </span>
                     </div>
                 <?php endif; ?>
                 

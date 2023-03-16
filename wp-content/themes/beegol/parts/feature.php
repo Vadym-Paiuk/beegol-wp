@@ -28,13 +28,13 @@
     <div class="feature__media feature__media--light-green <?php if( $image_style !== 'full' ) echo 'feature__media--oversize'; ?>">
         <?php if( !empty( $button ) ): ?>
             <div class="feature__img-wrap">
-                <?php echo wp_get_attachment_image( $image, 'full', false, [ 'class' => 'feature__img' ] ); ?>
+                <?php echo wp_get_attachment_image_custom( $image, 'full', false, [ 'class' => 'feature__img' ] ); ?>
             </div>
             <a href="<?php echo $button['url']; ?>" class="btn feature__btn" target="<?php echo $button['target']; ?>">
                 <?php echo $button['title']; ?>
             </a>
         <?php else: ?>
-            <?php echo wp_get_attachment_image( $image, 'full', false, [ 'class' => 'feature__img' ] ); ?>
+            <?php echo wp_get_attachment_image_custom( $image, 'full', false, [ 'class' => 'feature__img' ] ); ?>
         <?php endif; ?>
     </div>
 </div>

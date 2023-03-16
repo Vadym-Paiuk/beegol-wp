@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	stickyHeader ()
 	mobMenuToggle ()
 	toggleCard('.advantage')
-	validationForm ()
+
+	AOS.init();
 })
 
 function stickyHeader () {
@@ -54,12 +55,4 @@ function toggleCard (selector) {
 			activeCard = e.currentTarget
 		})
 	}
-}
-
-function validationForm () {
-	let form = document.querySelector('.form')
-	form.addEventListener('submit', function (e) {
-		console.log(e)
-		console.log(e.target)
-	})
 }
